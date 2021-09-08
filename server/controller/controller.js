@@ -10,8 +10,10 @@ exports.create = (req,res)=>{
     //new user
     const user = new Userdb({
         name:req.body.name,
-        email:req.body.email,
-        gender:req.body.gender,
+        endereco:req.body.endereco,
+        telefone:req.body.telefone,
+        taxa:req.body.taxa,
+        obs:req.body.obs,
         status: req.body.status
     })
     //save user in the database
@@ -56,7 +58,6 @@ exports.find = (req,res)=>{
     }
 }
 
-
 //update a new identified user by user id
 
 exports.update = (req, res)=>{
@@ -81,7 +82,6 @@ exports.update = (req, res)=>{
             res.status(500).send({ message : "Error Update user information"})
         })
 }
-
 
 
 //Delete a user with specified user id

@@ -5,15 +5,28 @@ var schema = new mongoose.Schema({
         type:String,
         required:true
     },
-    email:{
+    endereco:{
         type:String,
-        required:true,
-        unique:true
+        required:true   
+             
     },
-    gender:String,
+    taxa:{
+        type:String,
+             
+    },
+
+    telefone:{
+        type:String,
+        required:true        
+    },
+   
+    //gender:String,
+    obs:String,
     status:String
+        
+    
 })
 
-const Userdb = mongoose.model("userdb",schema)
+const Userdb = mongoose.model("userdatabase",schema)
 
 module.exports=Userdb

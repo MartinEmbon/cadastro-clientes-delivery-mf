@@ -1,25 +1,37 @@
-
 <%- include("include/_header")  %> 
 
 <main id="site-main">
     <div class="container">
         <div class="box-nav d-flex justify-between">
             <a href="/add_user" class="border-shadow">
-                <span class="text-gradient">Novo Cliente <i class="fas fa-user"></i></span>
-            </a>
+                <span class="text-gradient">Novo Cliente <i class="fas fa-user"></i></span>                
+            </a>            
+        </div>
+        
+        <div class="logo">
+        <img class="logoMartin" src="/img/logo.png" alt="">
         </div>
 
         <!-- form handling -->
         <form action="/" method="POST">
+            
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Busca por nombre...">
+                <a href="#" class="search-btn"></a>
+                <i class="fas fa-search"></i>
+            </div>
+
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
-                        <th>@Email</th>
-                        <th>Genero</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Taxa</th>
+                        <th>Obs</th>
                         <th>Status</th>
-                        <th>Action</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
             <tbody>
@@ -29,7 +41,6 @@
         </form>        
     </div>
 </main>
-
 
 
 <%- include("include/_footer")  %> 
