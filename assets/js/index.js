@@ -22,7 +22,7 @@ $("#update_user").submit(function(event){
 
     $.ajax(request).done(function(response){
         alert("Cliente atualizado com sucesso!");
-        var url = "http://localhost:3000/dashboard";
+        var url = "https://crud-delivery.herokuapp.com/dashboard";
         $(location).attr('href',url);
     })
 
@@ -34,7 +34,7 @@ if(window.location.pathname == "/dashboard"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:3000/dashboard/api/users/${id}`,
+            "url" : `https://crud-delivery.herokuapp.com/dashboard/api/users/${id}`,
             "method" : "DELETE"
         }
 

@@ -3,23 +3,29 @@
 <main id="site-main">
     <div class="container">
         
-        
-        <div class="logo">
-        <img class="logoMartin" src="/img/logo.png" alt="">
-        </div>
-       
             <h1>Homepage</h1>
 
             <main>
-                <div class="container-login">
-                    <img src="/img/logo.png" alt="">
+                <div class="box-login">
+                    <div class="box-logo">
+                        <div class="img-logo">
+                            <img class="logoMartin" src="/img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box-in">
+                        <h3>entre na sua conta</h3>    
+                          <form id="loginAuth" method="POST">                            
+                            <input type="email" name="email" placeholder="Digite seu e-mail" id="email" required>                            
+                            <input type="password" name="password" placeholder="Digite sua senha" id="password" required>                                              
+                            <div class="boton-login">
+                                <button type="submit" id="enviar">Login</button>
+                                <a href="/dashboard">Login</a>
+                            </div>
+                        </form>                                                                   
+                    </div>
                 </div>
-                <form action="">
-                    <input type="text" placeholder="Usuario">
-                    <input type="text" placeholder="Senha">
-                </form>
             </main>
-            <a href="/dashboard">Login</a>
+            
         
     </div>
 </main>
