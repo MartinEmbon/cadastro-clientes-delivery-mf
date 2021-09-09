@@ -276,7 +276,8 @@ table{
     margin:auto;    
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;   
+    margin-top: 1rem; 
 }
 
 .logoMartin {
