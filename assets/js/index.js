@@ -1,7 +1,5 @@
-
-
 $("#add_user").submit(function(event){
-    alert("Cliente adicionado com sucesso!");
+    alert("Data Inserted Successfully!");
 })
 
 $("#update_user").submit(function(event){
@@ -14,14 +12,15 @@ $("#update_user").submit(function(event){
         data[n['name']] = n['value']
     })
 
+
     var request = {
-        "url" : `https://crud-delivery.herokuapp.com/dashboard/api/users/${data.id}`,
+        "url" : `http://localhost:3000/dashboard/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
 
     $.ajax(request).done(function(response){
-        alert("Cliente atualizado com sucesso!");
+        alert("Data Updated Successfully!");
         var url = "https://crud-delivery.herokuapp.com/dashboard";
         $(location).attr('href',url);
     })
@@ -34,13 +33,13 @@ if(window.location.pathname == "/dashboard"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `https://crud-delivery.herokuapp.com/dashboard/api/users/${id}`,
+            "url" : `http://localhost:3000/dashboard/api/users/${id}`,
             "method" : "DELETE"
         }
 
-        if(confirm("Tem certeza de deletar cadastro?")){
+        if(confirm("Do you really want to delete this record?")){
             $.ajax(request).done(function(response){
-                alert("Cadastro deletado com sucesso!");
+                alert("Data Deleted Successfully!");
                 location.reload();
             })
         }

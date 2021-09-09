@@ -28,7 +28,7 @@ app.use("/js",express.static(path.resolve(__dirname,"assets/js")))
 
 //load routers
 
+//app.use("/",require("./server/routes/router"))
 app.use("/",require("./server/routes/router"))
-app.use("/dashboard",require("./server/routes/router"))
 
 app.listen(PORT,()=>{console.log("server running on",PORT)})
