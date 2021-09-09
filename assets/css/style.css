@@ -465,17 +465,6 @@ main .box-login .box-in input:hover {
 
 /* ====== MIDIAS SOCIAIS PARA LOGIN ====== */
 
-main .box-login .box-in .box-social {
-    /* border: 1px solid black; */
-    width: 200px;
-    height: 40px;
-    margin: 8px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5rem;
-}
-
 .img-logo img {
     margin: auto;
     width: 80%;
@@ -486,29 +475,6 @@ main .box-login .box-in .box-social {
     width: 100%;
 }
 
-main .box-login .box-in .box-social .logo-gmail {
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-main .box-login .box-in .box-social .logo-apple {
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-main .box-login .box-in .box-social .logo-outlook {
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
 
 /* ====== TESTE FONT AWESOME SOCIAL MEDIAS ====== */
 
@@ -532,22 +498,5 @@ main .box-login .box-in li a {
 }
 
 main .box-login .box-in a:hover i {
-    color: #8F1631;
-}
-
-/* ====== NAO TEM CONTA, CADASTRE-SE ====== */
-
-main .box-login h4 {
-    font-size: 13px;
-    align-items: left;
-    color: #343434;
-}
-
-main .box-login h4 a {
-    text-decoration: underline;
-    color: #343434;
-}
-
-main .box-login h4 a:hover {
     color: #8F1631;
 }
