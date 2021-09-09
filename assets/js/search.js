@@ -17,17 +17,6 @@ search.addEventListener("keyup",(e)=>{
 });
 
 
-let adminLogin = document.getElementById("adminLogin")
-let adminForm = document.getElementById("adminForm")
-let adminPwd = document.getElementById("adminPwd")
-let adminBtn = document.getElementById("adminBtn")
-
-adminForm.addEventListener("submit",(e)=>{
-  if (adminLogin.value!== "admin" || adminLogin.value==null || adminPwd.value!=="admin" || adminPwd.value==null){  
-    e.preventDefault()
-  }   
-})
-
 
 /*
 row.querySelector("td").textContent.toLowerCase().startsWith(q)
