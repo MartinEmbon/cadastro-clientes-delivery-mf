@@ -20,7 +20,7 @@ exports.create = (req,res)=>{
     user
         .save(user)
         .then(data=>{
-            res.redirect("/")
+            res.redirect("/dashboard")
         })
         .catch(err=>{
             res.status(500).send({message:err.message || "Some error occured while creating a create operation"})
