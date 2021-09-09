@@ -50,7 +50,7 @@ exports.find = (req,res)=>{
     } else {
       
 
-        Userdb.find().sort({name:-1})    
+        Userdb.find().sort({name:1})    
         .then(user => {
             res.send(user)
             
