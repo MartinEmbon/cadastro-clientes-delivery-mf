@@ -7,7 +7,7 @@ const rows = document.querySelectorAll("tbody tr")
 search.addEventListener("keyup",(e)=>{
     const q = e.target.value.toLowerCase();
         rows.forEach((row) => {
-          row.querySelector("td:nth-of-type(2)").textContent.toLowerCase().startsWith(q) ?
+          row.querySelector("td:nth-of-type(2)").textContent.toLowerCase().includes(q) ?
           row.style.display = "table-row"
           //row.classList.toggle("active")
 
