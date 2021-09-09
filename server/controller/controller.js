@@ -48,10 +48,14 @@ exports.find = (req,res)=>{
             res.status(500).send({message:"error retrieving"})
         })
     } else {
-        Userdb.find()
+      
+
+        Userdb.find().sort({name:-1})    
         .then(user => {
             res.send(user)
+            
         })
+       
         .catch(err => {
             res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
         })

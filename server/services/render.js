@@ -3,7 +3,7 @@ const axios = require("axios")
 //axios.get("https://crud-delivery.herokuapp.com/api/users")
 exports.homeRoutes=(req,res)=>{
     //mage a get req to the /api/users
-    axios.get("https://crud-delivery.herokuapp.com/api/users")
+    axios.get("https://crud-delivery.herokuapp.com/api/users")    
         .then(response=>{
             //console.log(response.data)            
             res.render("index",{users:response.data})        
