@@ -4,7 +4,7 @@ let adminForm = document.getElementById("adminForm")
 let adminPwd = document.getElementById("adminPwd")
 let adminBtn = document.getElementById("adminBtn")
 
-adminBtn.style.color="red"
+
 
 //adminBtn.disabled=true  
 adminBtn.addEventListener("click",(e)=>{
