@@ -256,7 +256,7 @@ table{
 .search-box i{
     position: absolute;
     top:0;
-    right:25%;    
+    right:15%;    
     width: 40px;
     height: 40px;
     align-items: center;
@@ -280,10 +280,14 @@ table{
 }
 
 .logoMartin {
-    max-width: 100%;
-    width:30%;    
+    max-width: 60%;
+    width:40%;    
 }
 
+.row.active{
+    display:flex;
+    
+}
 /*
 .search-box{
     position:absolute;
