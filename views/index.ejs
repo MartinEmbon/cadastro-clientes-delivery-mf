@@ -12,11 +12,12 @@
                     
                     <div class="box-in">
                         <h3>Entre na sua conta</h3>    
-                          <form id="loginAuth" method="POST">                            
-                            <input type="email" name="email" placeholder="Digite seu usuario" id="input_email" required>                            
-                            <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>                                              
+                          <form action="/dashboard" id="adminForm" method="GET">                            
+                            <input type="text" name="email" placeholder="Digite seu usuario" id="adminLogin">                            
+                            <input type="password" name="password" placeholder="Digite sua senha" id="adminPwd">                                              
                             <div class="boton-login">
-                                <button type="submit" id="enviar"><a href="/dashboard">Ingresar</a></button>
+                                <button type="submit" id="adminBtn">Login</button>
+                                <!-- <a href="/dashboard">Ingresar</a> -->
                                 
                             </div>
                         </form>                                                                   
