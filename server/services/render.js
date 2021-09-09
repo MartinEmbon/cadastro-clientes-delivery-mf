@@ -1,6 +1,6 @@
 const axios = require("axios")
-
-
+//axios.get("https://localhost:3000/api/users")
+//axios.get("https://crud-delivery.herokuapp.com/api/users")
 exports.homeRoutes=(req,res)=>{
     //mage a get req to the /api/users
     axios.get("https://crud-delivery.herokuapp.com/api/users")
@@ -28,3 +28,5 @@ exports.update_user = (req, res) =>{
             res.send(err);
         })
 }
+
+//axios.get('https://crud-delivery.herokuapp.com/api/users', { params : { id : req.query.id }})
