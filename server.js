@@ -73,5 +73,4 @@ passport.use(new localStrategy(function(username,password,done){
 }))
 
 app.use("/",require("./server/routes/router"))
-
 app.listen(PORT,()=>{console.log("server running on",PORT)})

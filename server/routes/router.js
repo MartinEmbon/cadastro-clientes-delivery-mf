@@ -2,24 +2,35 @@ const express = require('express');
 const route = express.Router()
 const services = require("../services/render")
 const controller = require("../controller/controller")
+
 const passport = require("passport")
+
 const isLoggedIn = require("./../middleware/isLoggedIn")
 const isLoggedOut = require("./../middleware/isLoggedOut")
 
-route.get("/",isLoggedIn,services.index)
+route.get("/",isLoggedIn,services.homeRoutes)
+//route.get("/",isLoggedIn,services.index)
 route.get("/login",isLoggedOut,services.login)
+
 route.get("/logout",services.logout)
 
 route.post("/login",passport.authenticate("local",{
-    succesRedirect:"http://localhost:3000/",
+    succesRedirect:"/",
     failureRedirect:"/login?error=true"
 }),services.loginpost)
 
-route.get("/setup",services.setup)
+//route.get("/setup",services.setup)
 
-route.get("/",isLoggedIn,services.homeRoutes)
+
+
+
+
+
 route.get("/add_user",services.add_user)
+
 route.get("/update_user",services.update_user)
+
+
 
 //API
 
@@ -27,6 +38,8 @@ route.post("/api/users",controller.create)
 route.get("/api/users",controller.find)
 route.put('/api/users/:id', controller.update);
 route.delete("/api/users/:id",controller.delete)
+
+route.use("*",services.pageNotFound)
 
 module.exports = route
 

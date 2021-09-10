@@ -6,6 +6,10 @@ exports.index=(req,res)=>{
     res.render("index",{title:"Home"})
 }
 
+exports.pageNotFound=(req,res)=>{
+     res.redirect("/login")    
+}
+
 exports.login=(req,res)=>{    
     const response = {
         title:"Login",
@@ -23,27 +27,6 @@ exports.loginpost=(req,res)=>{
     res.redirect("/")
 }
 
-exports.setup=async(req,res)=>{
-    const exists = await UserLogin.exists({ username: "admin" });
-	if (exists) {
-        res.redirect('/login');
-		return;
-	};
-
-	bcrypt.genSalt(10, function (err, salt) {
-		if (err) return next(err);
-		bcrypt.hash("pass", salt, function (err, hash) {
-			if (err) return next(err);
-			
-			const newAdmin = new UserLogin({
-				username: "admin",
-				password: hash
-			});
-			newAdmin.save();
-			res.redirect('/login');
-		});
-	});
-}
 
 
 exports.homeRoutes=(req,res)=>{    
@@ -74,6 +57,28 @@ exports.update_user = (req, res) =>{
 
 
 /*
+
+exports.setup=async(req,res)=>{
+    const exists = await UserLogin.exists({ username: "admin" });
+	if (exists) {
+        res.redirect('/login');
+		return;
+	};
+
+	bcrypt.genSalt(10, function (err, salt) {
+		if (err) return next(err);
+		bcrypt.hash("pass", salt, function (err, hash) {
+			if (err) return next(err);
+			
+			const newAdmin = new UserLogin({
+				username: "admin",
+				password: hash
+			});
+			newAdmin.save();
+			res.redirect('/login');
+		});
+	});
+}
 //axios.get('https://crud-delivery.herokuapp.com/api/users', { params : { id : req.query.id }})
 //axios.get("https://localhost:3000/api/users")
 //axios.get("https://crud-delivery.herokuapp.com/api/users")
