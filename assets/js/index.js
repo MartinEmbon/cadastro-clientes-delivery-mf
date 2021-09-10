@@ -14,26 +14,26 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `http://crud-delivery.herokuapp.com/dashboard/api/users/${data.id}`,
+        "url" : `http://crud-delivery.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
 
     $.ajax(request).done(function(response){
         alert("Data Updated Successfully!");
-        var url = "https://crud-delivery.herokuapp.com/dashboard";
+        var url = "https://crud-delivery.herokuapp.com/";
         $(location).attr('href',url);
     })
 
 })
 
-if(window.location.pathname == "/dashboard"){
+if(window.location.pathname == "/"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://crud-delivery.herokuapp.com/dashboard/api/users/${id}`,
+            "url" : `http://crud-delivery.herokuapp.com/api/users/${id}`,
             "method" : "DELETE"
         }
 

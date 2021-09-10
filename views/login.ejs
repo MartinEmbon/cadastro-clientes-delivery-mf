@@ -1,0 +1,30 @@
+<%- include("include/_header")  %> 
+
+<main id="site-main">
+    <div class="container app">
+
+        <form class="loginForm" action="/login" method="POST">
+            <% if(error){%> 
+                <p class="err-msg">Usuario ou Senha Incorreta</p>
+            <%} %> 
+            <div><h1>Ingresar</h1></div>
+            <div class="form-group1">
+                <label>Usuario:</label>
+                <input class="loginInput" type="text" name="username" id="username" placeholder="Ingresa usuario">                
+            </div>
+            <div class="form-group1">
+                <label>Senha:</label>
+                <input class="loginInput" type="password" name="password" id="password" placeholder="Ingresa senha">                
+            </div>
+            <div>
+                <input class="loginSubmit" type="submit" value="Ingresar">
+            </div>
+        </form>   
+
+        
+        
+    </div>
+</main>
+
+
+<%- include("include/_footer")  %> 

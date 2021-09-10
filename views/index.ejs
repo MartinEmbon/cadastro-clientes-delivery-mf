@@ -2,31 +2,47 @@
 
 <main id="site-main">
     <div class="container">
-                    
-            <main>
-                <div class="box-login">                    
-                    
-                    <div class="img-logo">
-                        <img class="logoMartin" src="/img/logo.png" alt="">
-                    </div>                    
-                    
-                    <div class="box-in">
-                        <h3>Entre na sua conta</h3>    
-                         
-                        <form action="/dashboard" id="adminForm" method="GET">                            
-                            <input type="text" name="email" placeholder="Digite seu usuario" id="adminLogin">                            
-                            <input type="password" name="password" placeholder="Digite sua senha" id="adminPwd">                                              
-                            <div class="boton-login">
-                                <button type="submit" id="adminBtn">Login</button>
-                                <!-- <a href="/dashboard">Ingresar</a> -->
-                                
-                            </div>
-                        </form>                                                                   
-                    </div>
-                </div> <!--box login-->
-            </main>
-            
+        <div class="box-nav d-flex justify-between">
+            <a href="/add_user" class="border-shadow">
+                <span class="text-gradient">Novo Cliente <i class="fas fa-user"></i></span>                
+            </a>                        
+            <a href="/logout" class="border-shadow">
+                <span class="text-gradient">Cerrar Sesion <i class="fas fa-user"></i></span>                
+            </a>            
+            <button class="border-shadow text-gradient downloadbt" onclick="generatePDF()">Descargar PDF <i class="fas fa-download"></i></button>
+        </div>
         
+        <div class="logo">
+        <img class="logoMartin" src="/img/logo.png" alt="">
+        </div>
+       
+        <!-- form handling -->
+        <form action="/" method="POST">
+            
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Busca por nombre..." onkeypress="return event.keyCode != 13;">
+                <a href="#" class="search-btn"></a>
+                <i class="fas fa-search"></i>
+            </div>
+
+            <table id="fulltable" class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Taxa</th>
+                        <th>Obs</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+            <tbody>
+               <%- include("include/_show") %> 
+            </tbody>
+        </table>
+        </form>        
     </div>
 </main>
 

@@ -1,5 +1,6 @@
 var Userdb = require("../model/model")
 
+
 // create and save new user
 exports.create = (req,res)=>{
     //validate request
@@ -20,7 +21,7 @@ exports.create = (req,res)=>{
     user
         .save(user)
         .then(data=>{
-            res.redirect("/dashboard")
+            res.redirect("/")
         })
         .catch(err=>{
             res.status(500).send({message:err.message || "Some error occured while creating a create operation"})
