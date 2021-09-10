@@ -30,11 +30,10 @@ exports.create = (req,res)=>{
 
 //retrive and return all users/retrieve and return a single user
 
-exports.find = (req,res)=>{
-    
+exports.find = async(req,res)=>{
     if(req.query.id){
         const id = req.query.id
-        Userdb.findById(id)
+        await Userdb.findById(id)
         .then(data=>{
             if(!data){
                 res.status(404).send({
@@ -49,8 +48,6 @@ exports.find = (req,res)=>{
             res.status(500).send({message:"error retrieving"})
         })
     } else {
-      
-
         Userdb.find().sort({name:1})    
         .then(user => {
             res.send(user)
@@ -65,7 +62,7 @@ exports.find = (req,res)=>{
 
 //update a new identified user by user id
 
-exports.update = (req, res)=>{
+exports.update = async(req, res)=>{
     if(!req.body){
         return res
             .status(400)
@@ -73,7 +70,7 @@ exports.update = (req, res)=>{
     }
 
     const id = req.params.id;
-    Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
+    await Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if(!data){
                 res.status(404).send({ message : `Cannot Update user with ${id}. Maybe user not found!`})
@@ -90,9 +87,9 @@ exports.update = (req, res)=>{
 
 
 //Delete a user with specified user id
-exports.delete=(req,res)=>{
+exports.delete=async(req,res)=>{
     const id = req.params.id
-    Userdb.findByIdAndDelete(id)
+    await Userdb.findByIdAndDelete(id)
     .then(data=>{
         if(!data){
             res.status(404).send({message:"Cannot delete with id"})

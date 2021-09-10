@@ -1,6 +1,6 @@
 const axios = require("axios")
 const bcrypt = require("bcrypt")
-var UserLogin = require("../model/user")
+//var UserLogin = require("../model/user")
 
 exports.index=(req,res)=>{
     res.render("index",{title:"Home"})
@@ -26,8 +26,6 @@ exports.logout=(req,res)=>{
 exports.loginpost=(req,res)=>{
     res.redirect("/")
 }
-
-
 
 exports.homeRoutes=(req,res)=>{    
     axios.get("https://crud-delivery.herokuapp.com/api/users")    
