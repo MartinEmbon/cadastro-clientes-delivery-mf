@@ -17,7 +17,6 @@ route.post("/login",passport.authenticate("local",{
     failureRedirect:"/login?error=true"
 }),services.loginpost)
 
-
 route.get("/add_user",services.add_user)
 route.get("/update_user",services.update_user)
 

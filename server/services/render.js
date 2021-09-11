@@ -1,5 +1,5 @@
 const axios = require("axios")
-const bcrypt = require("bcrypt")
+//const bcrypt = require("bcrypt")
 //var UserLogin = require("../model/user")
 
 exports.index=(req,res)=>{
