@@ -36,7 +36,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://crud-delivery.herokuapp.com/api/users/${id}`,
+            "url" : `/api/users/${id}`,
             "method" : "DELETE"
         }
 
