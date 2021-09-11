@@ -103,6 +103,18 @@ table{
     margin: 0 .2em;
 }
 
+.btnprint{
+    
+    font-size: 1.1em;
+    
+    align-items: center;
+    border: none;    
+    
+    cursor: pointer;
+    border-radius: .2em;
+    
+}
+
 .table tr:hover{
     background-color:#06d6a0 ;
 }
@@ -171,7 +183,6 @@ table{
     margin: 1em 2em;
 }
 
-/* adding style to radio buttons */
 .radio input[type='radio']{
     position: absolute;
     opacity: 0;
@@ -275,6 +286,7 @@ table{
     width:80%;
     margin:auto;    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;   
     margin-top: 1rem; 
@@ -283,64 +295,20 @@ table{
 .logoMartin {
     max-width: 60%;
     width:40%;    
+    margin-bottom: 1.5rem;
 }
 
 .row.active{
     display:flex;
     
 }
-/*
-.search-box{
-    position:absolute;
-    top:20%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background: #2f3640;
-    border-radius: 40px;
-    height: 40px;
-    padding:10px;
-}
 
-.search-btn{
-    color:#e84118;
-    float:right;
-    width:40px;
-    height:40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-box:hover > .search-txt{
-    width:240px;
-    padding:0 6px;
-}
-.search-box:hover > .search-btn{
-   background: white;
-}
-
-.search-txt{
-    border:none;
-    background: none;
-    outline:none;
-    float:left;
-    padding:0;
-    color:white;
-    font-size:16px;
-    transition:0.4s;
-    line-height: 40px;
-    width: 0px;
-}
- 
-*/
 .downloadbt{
     padding: 10px;
     font-family: 'Barlow', sans-serif;
     font-size: 1em;
     padding: .6em 1em;
-    
+    margin:auto;
 }
 /*Login*/
 
@@ -381,63 +349,14 @@ table{
     max-width: 100%;
 }
 
-/* ====== BOX IN - INFORMARÇÕES PARA LOGIN ====== */
-
-.box-in {    
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    margin: 1px auto;
-    margin-top: 1px;
-    border-radius: 25px;
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .print-container, .print-container * {
+        visibility: visible;
+        font-size:24px;
+        width:100%;
+    }
     
-}
-
-main .box-login .box-in h3 {
-    text-transform: uppercase;
-    font-family: 'Manrope', sans-serif;
-    color: #343434;    
-    font-size: 12px;
-}
-
-main .box-login .box-in input {
-    border-radius: 20px;
-    height: 35px;
-    width: 90%;
-    margin: 8px auto;
-    border: 1px solid rgba(128, 128, 128, 0.802);
-    box-shadow: 1px 1px 9px grey;
-    margin-bottom: 1.3rem;
-    padding:10px;
-    outline:none;
-}
-
-
-#adminLogin::placeholder,
-#adminPwd::placeholder {
-    text-align: center;
-    font-size: 13px;
-    padding: 10px;
-    color: rgba(0, 0, 0, 0.433);
-    font-family: 'Manrope', sans-serif;
-}
-
-/* ====== BOTAO LOGIN ====== */
-
-.boton-login {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    margin-top:1rem;
-}
-
-#adminBtn {
-    margin: auto;
-    width: 100%;
-    height: 35px;
-    width: 135px;
-    text-align: center;
-    box-shadow: 1px 1px 4px grey;
-    border-radius: 10px;   
 }

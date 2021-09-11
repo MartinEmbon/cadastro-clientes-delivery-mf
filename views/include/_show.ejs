@@ -2,8 +2,8 @@
 <% for (var i = 0; i<users.length; i++){%>
     <tr>
         <td><%= i+1 %></td>
-        <td><%= users[i].name%></td>
-        <td><%= users[i].endereco%></td>
+        <td class="print-container"><%= users[i].name%></td>
+        <td class="print-container"><%= users[i].endereco%></td>
         <td><%= users[i].telefone%></td>
         <td><%= users[i].taxa%></td>    
         <td><%= users[i].obs%></td>        
@@ -14,7 +14,13 @@
             </a>        
             <a data-id=<%= users[i]._id%> class="btn border-shadow delete">
                 <span class="text-gradient"><i class="fas fa-times"></i></span>
-            </a>        
+            </a>    
+           <a class="btn border-shadow">            
+            <button onclick="window.print()">
+                <span class="text-gradient"><i class="far fa-file-powerpoint"></i></span>
+            </button>
+           </a>
+            
         </td>
     </tr>
     
