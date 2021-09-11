@@ -17,7 +17,7 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `http://crud-delivery.herokuapp.com/api/users/${data.id}`,
+        "url" : `/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
