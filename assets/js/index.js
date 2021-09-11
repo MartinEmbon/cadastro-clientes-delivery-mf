@@ -24,8 +24,8 @@ $("#update_user").submit(function(event){
 
     $.ajax(request).done(function(response){
         alert("Data Updated Successfully!");
-        //var url = "https://crud-delivery.herokuapp.com/";
-        //$(location).attr('href',url);
+        var url = "https://crud-delivery.herokuapp.com/";
+        $(location).attr('href',url);
     })
 
 })
