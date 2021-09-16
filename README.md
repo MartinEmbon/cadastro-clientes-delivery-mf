@@ -1,4 +1,5 @@
-# DELIVERY SERVICE CLIENT REGISTRATOIN FOR RESTAURANTE MARTIN FIERRO. SÃO PAULO, BR.
+## DELIVERY SERVICE CUSTOMER REGISTRATION 
+## CLIENT: RESTAURANTE MARTIN FIERRO. SÃO PAULO, BR.
 
 The platform has several functionalities and details that are in the description below. 
 
@@ -8,17 +9,15 @@ It is a straigh-forward design for quick client registration and maintance of th
 
 <img src="/assets/img/readme_retrieve_data.png" width="400">
 
-## The Back End
-
 <img src="/assets/img/readme_new_client.png" width="400">
 
-`Database`.  NoSQL MongoDB for  CRUD operations.
-`HTML2PDF`.  Service for saving data in pdf. 
-`Session/Passport/Bcrypt`.  For login page. 
- 
-## Extra Bonus - `Search table with custom queries embeded.`
+## The Back End
 
-<img src="/assets/img/readme_homep.png" width="400">
+`Database`.  NoSQL MongoDB for  CRUD operations.<br />
+`HTML2PDF`.  Saving data in pdf.<br />
+`Session/Passport/Bcrypt/MongoDB`.  Login/Logout page.<br />
+ 
+## Extra Bonus - `Search table with custom queries.`
 
 ### Check out the project at: http://crud-delivery.herokuapp.com/
 
