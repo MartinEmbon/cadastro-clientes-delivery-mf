@@ -1,5 +1,5 @@
 ## DELIVERY SERVICE CUSTOMER REGISTRATION 
-## CLIENT: RESTAURANTE MARTIN FIERRO. SÃO PAULO, BR.
+### CLIENT: RESTAURANTE MARTIN FIERRO. SÃO PAULO, BR.
 
 The platform has several functionalities and details that are in the description below. 
 
